@@ -15,9 +15,28 @@ class HomePage extends StatelessWidget {
         title: Text("Home"),
       ),
       // ignore: avoid_unnecessary_containers
-      body: Container(
-        child: Center(child: Text("hello body")),
-      ),
+      body: Center(
+          child: Container(
+        padding: const EdgeInsets.all(20),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            boxShadow: const [
+              BoxShadow(
+                  color: Colors.grey, blurRadius: 5, offset: Offset(2.5, 5.0))
+            ],
+            borderRadius: BorderRadius.circular(15),
+            color: Colors.teal,
+            gradient:
+                const LinearGradient(colors: [Colors.green, Colors.yellow])),
+        width: 200,
+        height: 200,
+        child: const Text("hello body",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 20)),
+      )),
     );
   }
 }
