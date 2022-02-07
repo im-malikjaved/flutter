@@ -15,28 +15,41 @@ class HomePage extends StatelessWidget {
         title: Text("Home"),
       ),
       // ignore: avoid_unnecessary_containers
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Align(
+          alignment: Alignment.bottomRight,
           child: Container(
-        padding: const EdgeInsets.all(20),
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-            boxShadow: const [
-              BoxShadow(
-                  color: Colors.grey, blurRadius: 5, offset: Offset(2.5, 5.0))
-            ],
-            borderRadius: BorderRadius.circular(15),
-            color: Colors.teal,
-            gradient:
-                const LinearGradient(colors: [Colors.green, Colors.yellow])),
-        width: 200,
-        height: 200,
-        child: const Text("hello body",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 20)),
-      )),
+            color: Colors.black,
+            width: 200,
+            height: 400,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.red,
+                  width: 100,
+                  height: 100,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.green,
+                  width: 100,
+                  height: 100,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.yellow,
+                  width: 100,
+                  height: 100,
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
